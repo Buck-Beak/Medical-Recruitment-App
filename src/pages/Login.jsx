@@ -1,16 +1,21 @@
 import React, { useState } from "react";
 import { signIn } from "../functions/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function Login() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const navigate = useNavigate();
 
   const handleLogin = () => {
     signIn(email, password);
+    navigate('/entry-page');
   };
 
   return (
     <div>
+      <h1>Login</h1>
+      <label>Email:</label>
       <input
         type="email"
         placeholder="Email"
@@ -18,6 +23,7 @@ export default function Login() {
           setEmail(e.target.value);
         }}
       />
+      <label>Password:</label>
       <input
         type="password"
         placeholder="Password"
@@ -26,7 +32,7 @@ export default function Login() {
         }}
       />
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="login-button"
         onClick={handleLogin}
       >
         Login

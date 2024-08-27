@@ -30,6 +30,7 @@ export const createData = async (collectionName, data) => {
       id,
       ...data,
     });
+    console.log("posted successfully");
   } catch (error) {
     console.error("Error adding document: ", error);
   }

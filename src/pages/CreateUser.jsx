@@ -29,35 +29,40 @@ export default function CreateUSer() {
 
   return (
     <>
-      <h1 className="text-3xl font-bold text-center mb-12">Register</h1>
+      <h1 className="register">Register</h1>
       <p>{firstName}</p>
-      <div className="grid grid-cols-2 gap-4 max-w-5xl mx-auto">
+      <div className="form">
+        <label>First Name:</label>
         <input type="text" placeholder="First Name" 
         onChange={(e) => {
           setFirstName(e.target.value);
         }}
         />
+        <label>Last Name:</label>
         <input type="text" placeholder="Last Name" 
         onChange={(e) => {
           setLastName(e.target.value);
         }}
         />
+        <label>Email:</label>
         <input type="email" placeholder="Email" 
         onChange={(e) => {
           setEmail(e.target.value);
         }}
         />
+        <label>Password:</label>
         <input type="password" placeholder="Password" 
         onChange={(e) => {
           setPassword(e.target.value);
         }}
         />
+        <label>Confirm Password:</label>
         <input type="password" placeholder="Confirm Password"
         onChange={(e) => {
           setConfirmPassword(e.target.value);
         }} 
         />
-        <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        <button className="Create-button"
         onClick={handleCreateUser}
         >
           Register

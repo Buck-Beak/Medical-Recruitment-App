@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+/*import React, { useState } from "react";
 import { UserAuth } from "../context/AuthContext";
 import { logout } from "../functions/auth";
 import { updateData } from "../functions/crud";
@@ -30,18 +30,40 @@ export default function UserDashboard() {
         }}
       />
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+        className="update-button"
         onClick={handleUpdateName}
       >
         Update Name
       </button>
 
       <button
-        className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline block mt-12"
+        className="logout-button"
         onClick={handleLogout}
       >
         Logout
       </button>
     </>
   );
+}*/
+
+import { UserAuth } from "../context/AuthContext";
+import { logout } from "../functions/auth";
+import { Link } from "react-router-dom";
+
+export default function UserDashboard(){
+  const { user } = UserAuth();
+
+  const handleLogout=()=>{
+    logout();
+  }
+  return (
+    <div className="user-dashboard">
+      <nav>
+        <Link to="/create-post" className="create">Create Post</Link>
+        <Link to="/user-profile" className="user profile">My Profile</Link>
+      </nav>
+      <h2>Welcome {user?.firstName}</h2>
+      <button className="logout" onClick={handleLogout}>Logout</button>
+    </div>
+   );
 }
