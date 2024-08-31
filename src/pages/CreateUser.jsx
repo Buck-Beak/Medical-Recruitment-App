@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { signUp } from "../functions/auth";
+import { useNavigate } from "react-router-dom";
 
 export default function CreateUSer() {
   const [firstName, setFirstName] = useState("");
@@ -7,12 +8,24 @@ export default function CreateUSer() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
+  const [hiring,setHiring] = useState(false);
+  const navigate = useNavigate();
 
   const userData = {
     firstName,
     lastName,
     email,
+    hiring,
   };
+
+  const handleHire=()=>{
+    setHiring(true);
+    console.log(hiring);
+  }
+  const handleNotHire=()=>{
+    setHiring(false);
+    console.log(hiring);
+  }
 
   const handleCreateUser = () => {
     if (password !== confirmPassword) {
@@ -24,7 +37,11 @@ export default function CreateUSer() {
     } else if (!password) {
       alert("Password is required");
       return;
-    } else signUp(email, password, userData);
+    } else{
+      signUp(email, password, userData);
+      navigate('/user-details');
+    }
+
   };
 
   return (
@@ -62,6 +79,9 @@ export default function CreateUSer() {
           setConfirmPassword(e.target.value);
         }} 
         />
+        <p>Are you a hiring?</p>
+        <button className="hiring" onClick={handleHire}>Yes</button>
+        <button className="not-hiring" onClick={handleNotHire}>No</button>
         <button className="Create-button"
         onClick={handleCreateUser}
         >

@@ -4,7 +4,7 @@ import UserRoutes from "./routes/UserRoutes";
 
 function App() {
   const { isLoggedOut } = UserAuth();
-
+ console.log(isLoggedOut);
   return <div>{isLoggedOut ? <NonUserRoutes /> : <UserRoutes />}</div>;
 }
 
