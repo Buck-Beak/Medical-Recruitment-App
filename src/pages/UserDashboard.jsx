@@ -62,6 +62,7 @@ export default function UserDashboard(){
         <Link to="/create-post" className="create">Create Post</Link>
         <Link to="/user-profile" className="user profile">My Profile</Link>
         <Link to="/entry-page">Home</Link>
+        <Link to="/consultation" className="consultation">Stress Relief Tips</Link>
         <button className="logout" onClick={handleLogout}>Logout</button>
       </nav>
       <h2>Welcome {user?.firstName}</h2>

@@ -8,6 +8,7 @@ import EntryPage from '../pages/EntryPage';
 import UserProfileDetails from '../pages/UserProfileDetails';
 import Apply from '../pages/Apply';
 import AnotherUserProfile from '../pages/AnotherUserProfile';
+import Consultation from '../pages/Consultation';
 
 export default function UserRoutes() {
   return (
@@ -21,6 +22,7 @@ export default function UserRoutes() {
         <Route path="/user-details" element={<UserProfileDetails/>}></Route>
         <Route path="/apply" element={<Apply/>}></Route>
         <Route path="/user-profile/:id" element={<AnotherUserProfile/>}></Route>
+        <Route path="/consultation" element={<Consultation/>}></Route>
       </Routes>
     </div>
   )

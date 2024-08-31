@@ -13,7 +13,8 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <div className="login-container">
+      <div className="login-form">
       <h1>Login</h1>
       <label>Email:</label>
       <input
@@ -37,6 +38,7 @@ export default function Login() {
       >
         Login
       </button>
+      </div>
     </div>
   );
 }
