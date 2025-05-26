@@ -1,7 +1,7 @@
 # Firebase React Tailwind Web App
 
 ## Overview
-This repository contains the source code for a full-stack web application built using React, Firebase, and Tailwind CSS. The application includes user authentication, data storage with Firestore, and a sleek user interface styled with Tailwind CSS. This README provides an overview of the project structure, setup instructions, and key features.
+This repository contains the source code for a full-stack web application built using React, Firebase, and Tailwind CSS. The application includes user authentication, data storage with Firestore, and a sleek user interface styled with Tailwind CSS.This README provides an overview of the project structure, setup instructions,and key features.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
