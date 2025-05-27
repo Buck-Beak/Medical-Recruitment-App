@@ -1,7 +1,6 @@
-# Firebase React Tailwind Web App
+# Medical Recruitment App
 
-## Overview
-This repository contains the source code for a full-stack web application built using React, Firebase, and Tailwind CSS. The application includes user authentication, data storage with Firestore, and a sleek user interface styled with Tailwind CSS.This README provides an overview of the project structure, setup instructions,and key features.
+A platform that connects **medical professionals** with **recruiters** and **hospitals** in need of urgent staffing. Built during the [.hack();24 Hackathon](https://ieeemace.com), this app aims to streamline the recruitment process in the healthcare sector.
 
 ## Table of Contents
 - [Getting Started](#getting-started)
